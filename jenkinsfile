@@ -1,20 +1,37 @@
 
-pipeline
-      {
-        agent any 
-          
-	    stages
+pipeline {
 
-	     {
-	         stage ('print  hellow word')
-                    {
-		     
-  		  steps
-		       {
-		       sh 'echo hellow world' 
-		        }
+  agent any 
 
-		    }
-	   
-           }
-      }
+     stages 
+
+       {
+         stage ('print clone')
+
+	   {
+	       steps
+	       { 
+	       
+	        sh 'echo gitclone' 
+		}
+	   }
+
+          stage ( 'print test case' )
+
+              {
+	         steps 
+		 {
+		 sh 'echo test case'
+		 }
+	      }
+
+           stage ('print build')
+	      {
+	        steps
+		{
+		 sh 'echo build stage'
+		}
+	      }
+       }
+
+    }
