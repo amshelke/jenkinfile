@@ -1,0 +1,21 @@
+
+pipeline
+      {
+        agent any 
+          {
+	    statges
+
+	     {
+	         stage ('print  hellow word')
+                    {
+		     
+  		  steps
+		       {
+		       sh 'echo hellow world' 
+		        }
+
+		    }
+	     }
+      
+      
+      }
