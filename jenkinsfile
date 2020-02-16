@@ -3,7 +3,7 @@ pipeline
       {
         agent any 
           
-	    statges
+	    stages
 
 	     {
 	         stage ('print  hellow word')
