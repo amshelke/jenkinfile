@@ -1,7 +1,9 @@
 
 pipeline
       {
-        agent any 
+        agent 
+	{
+	  any 
           {
 	    statges
 
@@ -15,7 +17,7 @@ pipeline
 		        }
 
 		    }
-	     }
+	     }}
       
       }
       }
