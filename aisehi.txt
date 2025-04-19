@@ -1,0 +1,14 @@
+https://download.jboss.org/wildfly/$WILDFLY_RELEASE.Final/wildfly-$WILDFLY_RELEASE.Final.tar.gz
+
+https://download.jboss.org/wildfly/$WILDFLY_RELEASE.Final/wildfly-$WILDFLY_RELEASE.Final.tar.gz
+
+wget https://download.jboss.org/wildfly/$WILDFLY_RELEASE.Final/wildfly-$WILDFLY_RELEASE.Final.tar.gz
+
+tar xvf wildfly-$WILDFLY_RELEASE.Final.tar.gz
+
+sudo groupadd --system wildfly 
+
+sudo useradd -s /sbin/nologin --system -d /opt/wildfly -g wildfly wildfly
+
+
+cat >> ~/.bashrc <<EOF export WildFly_BIN="/opt/wildfly/bin/" export PATH=\$PATH:\$WildFly_BIN EOF
